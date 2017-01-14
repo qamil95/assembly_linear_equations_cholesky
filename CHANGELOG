@@ -1,5 +1,7 @@
 2017.01.14
-Przygotowanie środowiska - testowa aplikacja w C# dodająca dwie liczby korzystając z biblioteki Asemblerowej oraz odejmująca je, korzystając z biblioteki w C.
+* Wrzucenie karty projektu
+* Przygotowanie środowiska - testowa aplikacja w C# dodająca dwie liczby korzystając z biblioteki Asemblerowej oraz odejmująca je, korzystając z biblioteki w C.
+* Początek prac nad GUI (nadal testowo działa dodawanie i odejmowanie z wykorzystaniem funkcji ładowanych z DLL)
 
 2016.11.17
-Utworzenie projektu
+* Utworzenie projektu
