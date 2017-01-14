@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -46,86 +47,60 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(352, 150);
+            resources.ApplyResources(this.textBox1, "textBox1");
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(352, 176);
+            resources.ApplyResources(this.textBox2, "textBox2");
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
             // 
             // textBox3
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(352, 202);
+            resources.ApplyResources(this.textBox3, "textBox3");
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
             // 
             // chooseLibGroupBox
             // 
             this.chooseLibGroupBox.Controls.Add(this.cRadioButton);
             this.chooseLibGroupBox.Controls.Add(this.asmRadioButton);
-            this.chooseLibGroupBox.Location = new System.Drawing.Point(12, 41);
+            resources.ApplyResources(this.chooseLibGroupBox, "chooseLibGroupBox");
             this.chooseLibGroupBox.Name = "chooseLibGroupBox";
-            this.chooseLibGroupBox.Size = new System.Drawing.Size(130, 67);
-            this.chooseLibGroupBox.TabIndex = 5;
             this.chooseLibGroupBox.TabStop = false;
-            this.chooseLibGroupBox.Text = "Wybierz bibliotekę";
             // 
             // cRadioButton
             // 
-            this.cRadioButton.AutoSize = true;
-            this.cRadioButton.Location = new System.Drawing.Point(7, 43);
+            resources.ApplyResources(this.cRadioButton, "cRadioButton");
             this.cRadioButton.Name = "cRadioButton";
-            this.cRadioButton.Size = new System.Drawing.Size(87, 17);
-            this.cRadioButton.TabIndex = 1;
-            this.cRadioButton.Text = "odejmowanie";
             this.cRadioButton.UseVisualStyleBackColor = true;
             this.cRadioButton.CheckedChanged += new System.EventHandler(this.cRadioButton_CheckedChanged);
             // 
             // asmRadioButton
             // 
-            this.asmRadioButton.AutoSize = true;
+            resources.ApplyResources(this.asmRadioButton, "asmRadioButton");
             this.asmRadioButton.Checked = true;
-            this.asmRadioButton.Location = new System.Drawing.Point(7, 20);
             this.asmRadioButton.Name = "asmRadioButton";
-            this.asmRadioButton.Size = new System.Drawing.Size(77, 17);
-            this.asmRadioButton.TabIndex = 0;
             this.asmRadioButton.TabStop = true;
-            this.asmRadioButton.Text = "dodawanie";
             this.asmRadioButton.UseVisualStyleBackColor = true;
             this.asmRadioButton.CheckedChanged += new System.EventHandler(this.asmRadioButton_CheckedChanged);
             // 
             // openMatrixButton
             // 
-            this.openMatrixButton.Location = new System.Drawing.Point(12, 12);
+            resources.ApplyResources(this.openMatrixButton, "openMatrixButton");
             this.openMatrixButton.Name = "openMatrixButton";
-            this.openMatrixButton.Size = new System.Drawing.Size(130, 23);
-            this.openMatrixButton.TabIndex = 6;
-            this.openMatrixButton.Text = "Otwórz macierz";
             this.openMatrixButton.UseVisualStyleBackColor = true;
             this.openMatrixButton.Click += new System.EventHandler(this.openMatrixButton_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.DefaultExt = "txt";
-            this.openFileDialog1.Filter = "|*.txt";
-            this.openFileDialog1.Title = "Otwórz macierz";
+            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
             this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // viewMatrixButton
             // 
-            this.viewMatrixButton.Enabled = false;
-            this.viewMatrixButton.Location = new System.Drawing.Point(148, 12);
+            resources.ApplyResources(this.viewMatrixButton, "viewMatrixButton");
             this.viewMatrixButton.Name = "viewMatrixButton";
-            this.viewMatrixButton.Size = new System.Drawing.Size(130, 23);
-            this.viewMatrixButton.TabIndex = 7;
-            this.viewMatrixButton.Text = "Podgląd macierzy";
             this.viewMatrixButton.UseVisualStyleBackColor = true;
             this.viewMatrixButton.Click += new System.EventHandler(this.viewMatrixButton_Click);
             // 
@@ -133,33 +108,25 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.loadedFileStatus});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 260);
+            resources.ApplyResources(this.statusStrip1, "statusStrip1");
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(464, 22);
-            this.statusStrip1.TabIndex = 8;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // loadedFileStatus
             // 
             this.loadedFileStatus.Name = "loadedFileStatus";
-            this.loadedFileStatus.Size = new System.Drawing.Size(109, 17);
-            this.loadedFileStatus.Text = "Wczytany plik: brak";
+            resources.ApplyResources(this.loadedFileStatus, "loadedFileStatus");
             // 
             // computeMatrixButton
             // 
-            this.computeMatrixButton.Location = new System.Drawing.Point(149, 42);
+            resources.ApplyResources(this.computeMatrixButton, "computeMatrixButton");
             this.computeMatrixButton.Name = "computeMatrixButton";
-            this.computeMatrixButton.Size = new System.Drawing.Size(129, 23);
-            this.computeMatrixButton.TabIndex = 9;
-            this.computeMatrixButton.Text = "Oblicz";
             this.computeMatrixButton.UseVisualStyleBackColor = true;
             this.computeMatrixButton.Click += new System.EventHandler(this.computeMatrixButton_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 282);
             this.Controls.Add(this.computeMatrixButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.viewMatrixButton);
@@ -169,7 +136,6 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.chooseLibGroupBox.ResumeLayout(false);
             this.chooseLibGroupBox.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
