@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MAIN
@@ -15,9 +10,11 @@ namespace MAIN
     {
         bool assembly = true;
         bool computed = false;
+        int size; //wymiar macierzy (są kwadratowe) i długość wektora
         double[][] matrixA; //macierz ze współczynnikami
         double[] vectorB; //wektor wyrazów wolnych
-        double[] vectorX;
+        double[] vectorX; //wektor wyniku
+
         public Form1()
         {
             InitializeComponent();
@@ -41,9 +38,14 @@ namespace MAIN
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
             string[] file = File.ReadAllLines(openFileDialog1.FileName);
-            int size = file.Length;
-            matrixA = new double[size][];
+            size = file.Length;
+
+            //przydzielenie pamięci na tablice
+            matrixA = new double[size][];            
             vectorB = new double[size];
+            vectorX = new double[size];
+
+            //wczytanie danych z pliku
             try
             {
                 for (int i = 0; i < size; i++)
@@ -51,11 +53,10 @@ namespace MAIN
                     string[] line = file[i].Split(' ');
                     matrixA[i] = new double[size];
                     for (int j = 0; j < size; j++)
-                    {
-                        matrixA[i][j] = double.Parse(line[j]);
-                    }
+                        matrixA[i][j] = double.Parse(line[j]);       
                     vectorB[i] = double.Parse(line[size]);
                 }
+
                 computed = false;
                 viewMatrixButton.Enabled = true;
                 computeMatrixButton.Enabled = true;
@@ -75,17 +76,43 @@ namespace MAIN
 
         private void computeMatrixButton_Click(object sender, EventArgs e)
         {
-            Double a, b, wynik;
-            a = Double.Parse(textBox1.Text);
-            b = Double.Parse(textBox2.Text);
+            //macierze i wektory do obliczeń
+            double[] matrixU = new double[size * size];
+            double[] matrixL = new double[size * size];
+            double[] vectorY = new double[size];
+
+            //skopiowanie macierzy A do macierzy U oraz wyzerowanie macierzy L
+            for (int i=0; i<size; i++)
+                for (int j = 0; j < size; j++)
+                {
+                    matrixU[i * size + j] = matrixA[i][j];
+                    matrixL[i * size + j] = 0;
+                }
+
+            //główna część obliczeniowa
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+
             if (assembly)
             {
-                wynik = FunkcjeZewnetrzne.licz_asm(a, b);
-            } else
-            {
-                wynik = FunkcjeZewnetrzne.licz_c(a, b);
+                ExternalFunctions.computeMatrixU_ASM(matrixU, size);
+                ExternalFunctions.computeMatrixL_ASM(matrixL, matrixU, size);
+                ExternalFunctions.computeVectorY_ASM(vectorY, vectorB, matrixL, size);
+                ExternalFunctions.computeVectorX_ASM(vectorX, vectorY, matrixU, size);
+                
             }
-            textBox3.Text = wynik.ToString();
+            else
+            {
+                ExternalFunctions.computeMatrixU_C(matrixU, size);
+                ExternalFunctions.computeMatrixL_C(matrixL, matrixU, size);
+                ExternalFunctions.computeVectorY_C(vectorY, vectorB, matrixL, size);
+                ExternalFunctions.computeVectorX_C(vectorX, vectorY, matrixU, size);
+            }
+
+            stopWatch.Stop();
+            timerTextBox.Text = stopWatch.Elapsed.ToString();
+            computed = true;
+       
         }
     }
 }

@@ -59,7 +59,7 @@
     <Compile Include="viewMatrix.Designer.cs">
       <DependentUpon>viewMatrix.cs</DependentUpon>
     </Compile>
-    <Compile Include="FunkcjeZewnetrzne.cs" />
+    <Compile Include="ExternalFunctions.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.pl.resx">

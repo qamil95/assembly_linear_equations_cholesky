@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.chooseLibGroupBox = new System.Windows.Forms.GroupBox();
             this.cRadioButton = new System.Windows.Forms.RadioButton();
             this.asmRadioButton = new System.Windows.Forms.RadioButton();
@@ -41,24 +38,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.loadedFileStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.computeMatrixButton = new System.Windows.Forms.Button();
+            this.timerTextBox = new System.Windows.Forms.TextBox();
             this.chooseLibGroupBox.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            // 
-            // textBox2
-            // 
-            resources.ApplyResources(this.textBox2, "textBox2");
-            this.textBox2.Name = "textBox2";
-            // 
-            // textBox3
-            // 
-            resources.ApplyResources(this.textBox3, "textBox3");
-            this.textBox3.Name = "textBox3";
             // 
             // chooseLibGroupBox
             // 
@@ -123,18 +106,21 @@
             this.computeMatrixButton.UseVisualStyleBackColor = true;
             this.computeMatrixButton.Click += new System.EventHandler(this.computeMatrixButton_Click);
             // 
+            // timerTextBox
+            // 
+            resources.ApplyResources(this.timerTextBox, "timerTextBox");
+            this.timerTextBox.Name = "timerTextBox";
+            // 
             // Form1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.timerTextBox);
             this.Controls.Add(this.computeMatrixButton);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.viewMatrixButton);
             this.Controls.Add(this.openMatrixButton);
             this.Controls.Add(this.chooseLibGroupBox);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
             this.Name = "Form1";
             this.chooseLibGroupBox.ResumeLayout(false);
             this.chooseLibGroupBox.PerformLayout();
@@ -146,10 +132,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.GroupBox chooseLibGroupBox;
         private System.Windows.Forms.RadioButton cRadioButton;
         private System.Windows.Forms.RadioButton asmRadioButton;
@@ -159,6 +141,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel loadedFileStatus;
         private System.Windows.Forms.Button computeMatrixButton;
+        private System.Windows.Forms.TextBox timerTextBox;
     }
 }
 

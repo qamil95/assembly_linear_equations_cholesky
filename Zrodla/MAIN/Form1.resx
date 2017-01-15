@@ -117,72 +117,54 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="textBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 150</value>
+  <data name="&gt;&gt;cRadioButton.Name" xml:space="preserve">
+    <value>cRadioButton</value>
   </data>
-  <data name="textBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
+  <data name="&gt;&gt;cRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="textBox1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;cRadioButton.Parent" xml:space="preserve">
+    <value>chooseLibGroupBox</value>
+  </data>
+  <data name="&gt;&gt;cRadioButton.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;textBox1.Name" xml:space="preserve">
-    <value>textBox1</value>
+  <data name="&gt;&gt;asmRadioButton.Name" xml:space="preserve">
+    <value>asmRadioButton</value>
   </data>
-  <data name="&gt;&gt;textBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;asmRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;textBox1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;asmRadioButton.Parent" xml:space="preserve">
+    <value>chooseLibGroupBox</value>
   </data>
-  <data name="&gt;&gt;textBox1.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="textBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 176</value>
-  </data>
-  <data name="textBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="textBox2.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;asmRadioButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="&gt;&gt;textBox2.Name" xml:space="preserve">
-    <value>textBox2</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="chooseLibGroupBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 41</value>
   </data>
-  <data name="&gt;&gt;textBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="chooseLibGroupBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 67</value>
   </data>
-  <data name="&gt;&gt;textBox2.Parent" xml:space="preserve">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="chooseLibGroupBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="chooseLibGroupBox.Text" xml:space="preserve">
+    <value>Wybierz bibliotekę</value>
+  </data>
+  <data name="&gt;&gt;chooseLibGroupBox.Name" xml:space="preserve">
+    <value>chooseLibGroupBox</value>
+  </data>
+  <data name="&gt;&gt;chooseLibGroupBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chooseLibGroupBox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;textBox2.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="textBox3.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="textBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>352, 202</value>
-  </data>
-  <data name="textBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="textBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Name" xml:space="preserve">
-    <value>textBox3</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;textBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;textBox3.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;chooseLibGroupBox.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="cRadioButton.AutoSize" type="System.Boolean, mscorlib">
@@ -239,30 +221,6 @@
   <data name="&gt;&gt;asmRadioButton.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="chooseLibGroupBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
-  </data>
-  <data name="chooseLibGroupBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 67</value>
-  </data>
-  <data name="chooseLibGroupBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="chooseLibGroupBox.Text" xml:space="preserve">
-    <value>Wybierz bibliotekę</value>
-  </data>
-  <data name="&gt;&gt;chooseLibGroupBox.Name" xml:space="preserve">
-    <value>chooseLibGroupBox</value>
-  </data>
-  <data name="&gt;&gt;chooseLibGroupBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chooseLibGroupBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;chooseLibGroupBox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <data name="openMatrixButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
   </data>
@@ -285,7 +243,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;openMatrixButton.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -321,17 +279,11 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;viewMatrixButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 17</value>
   </metadata>
-  <data name="loadedFileStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 17</value>
-  </data>
-  <data name="loadedFileStatus.Text" xml:space="preserve">
-    <value>Wczytany plik: brak</value>
-  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 260</value>
   </data>
@@ -354,7 +306,13 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
+  </data>
+  <data name="loadedFileStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 17</value>
+  </data>
+  <data name="loadedFileStatus.Text" xml:space="preserve">
+    <value>Wczytany plik: brak</value>
   </data>
   <data name="computeMatrixButton.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -381,6 +339,27 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;computeMatrixButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="timerTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 88</value>
+  </data>
+  <data name="timerTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>129, 20</value>
+  </data>
+  <data name="timerTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;timerTextBox.Name" xml:space="preserve">
+    <value>timerTextBox</value>
+  </data>
+  <data name="&gt;&gt;timerTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timerTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;timerTextBox.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
