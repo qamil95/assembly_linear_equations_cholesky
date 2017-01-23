@@ -1,3 +1,6 @@
+2017.01.23
+* Działające tworzenie macierzy L w asemblerze
+
 2017.01.15
 * Ukończony (minimalistyczny) interfejs
 * Ukończona biblioteka w C, wybranie biblioteki ASM powoduje wykonanie obliczeń kodem C#

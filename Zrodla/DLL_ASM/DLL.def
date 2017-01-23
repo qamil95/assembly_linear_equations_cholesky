@@ -1,3 +1,7 @@
 LIBRARY "DLL"
 EXPORTS
 test_asm
+computeMatrixU_ASM
+computeMatrixL_ASM
+computeVectorY_ASM
+computeVectorX_ASM

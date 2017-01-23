@@ -1,9 +1,5 @@
 #include "DLL.h"
 
-double test_c(double x, double y) {
-	return x - y;
-}
-
 void computeMatrixU_C(double* matrixU, int size) {
 	for (int k = 0; k < size - 1; k++)
 		for (int i = k + 1; i < size; i++)		
