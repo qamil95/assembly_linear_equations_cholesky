@@ -5,9 +5,6 @@ namespace MAIN
     unsafe class ExternalFunctions
     {
         [DllImport("DLL_ASM.dll", CallingConvention = CallingConvention.StdCall)]
-        public static extern double test_asm(double a, double b);
-
-        [DllImport("DLL_ASM.dll", CallingConvention = CallingConvention.StdCall)]
         public static extern void computeMatrixU_ASM(double[] matrixU, int size);        
 
         [DllImport("DLL_ASM.dll", CallingConvention = CallingConvention.StdCall)]
@@ -30,29 +27,7 @@ namespace MAIN
 
         [DllImport("DLL_C.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern void computeVectorX_C(double[] vectorX, double[] vectorY, double[] matrixU, int size);
-
-        
-        internal static void computeMatrixU_plotek(double[] matrixU, int size)
-        {
-            for (int k = 0; k < size - 1; k++)
-                for (int i = k + 1; i < size; i++)
-                    for (int j = k + 1; j < size; j++)
-                        matrixU[i * size + j] = matrixU[i * size + j] - ((matrixU[i * size + k] * matrixU[k * size + j]) / matrixU[k * size + k]);
-        }        
-
-        internal static void computeVectorY_plotek(double[] vectorY, double[] vectorB, double[] matrixL, int size)
-        {
-            vectorY[0] = vectorB[0];
-            for (int i = 1; i < size; i++)
-            {
-                double sum = 0;
-                for (int k = 0; k <= i; k++)
-                {
-                    sum += matrixL[i * size + k] * vectorY[k];
-                }
-                vectorY[i] = vectorB[i] - sum;
-            }
-        }
+ 
 
         internal static void computeVectorX_plotek(double[] vectorX, double[] vectorY, double[] matrixU, int size)
         {
