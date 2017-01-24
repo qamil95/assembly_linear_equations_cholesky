@@ -66,7 +66,7 @@
             this.ClientSize = new System.Drawing.Size(464, 282);
             this.Controls.Add(this.text);
             this.Name = "viewMatrix";
-            this.Text = "Form2";
+            this.Text = "Podgląd macierzy";
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource2)).EndInit();

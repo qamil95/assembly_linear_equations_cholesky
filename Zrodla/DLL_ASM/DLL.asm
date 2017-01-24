@@ -180,10 +180,58 @@ pop ebx
 ret
 computeVectorY_ASM endp
 
+;************************************************************************
+; Procedura obliczaj¹ca wektor X. Parametry wejœciowe: wektor X (miejsce
+; na wynik), wektor Y, macierz U oraz rozmiar macierzy.
+;************************************************************************
 computeVectorX_ASM proc vectorX:ptr qword, vectorY:ptr qword, matrixU:ptr qword, matrixSize:dword
 push ebx
 
+mov eax, vectorX
+mov ebx, vectorY
+mov ecx, matrixU
 
+;vectorX[size - 1] = vectorY[size - 1] / matrixU[(size - 1) * size + (size - 1)];
+mov edi, matrixSize
+dec edi ; edi = size -1
+fld qword ptr [ebx + 8*edi] ;vectorY[size -1]
+mov esi, edi
+imul esi, matrixSize
+add esi, matrixSize
+dec esi
+fld qword ptr [ecx + 8*esi] ;matrixU[(size - 1) * size + (size - 1)];
+fdivp
+fstp qword ptr [eax + 8*edi] ;vectorX[size - 1]
+
+mov edx, matrixSize
+sub edx, 2 ;edx = i
+_while: ; edx >= 0
+	fldz
+	mov edi, edx 
+	inc edi ; edi = k
+	.while edi < matrixSize
+		mov esi, edx
+		imul esi, matrixSize
+		add esi, edi
+		fld qword ptr [ecx + 8*esi]
+		fld qword ptr [eax + 8*edi]
+		fmulp
+		faddp
+		inc edi
+	.endw
+	fld qword ptr [ebx + 8*edx]
+	fsubrp
+	mov edi, edx
+	imul edi, matrixSize
+	add edi, edx ;matrixU[i * size + i];
+	fld qword ptr [ecx + 8*edi]
+	fdivp
+	fstp qword ptr [eax + 8*edx]	
+	cmp edx, 0
+	je _end_while
+	dec edx
+	jmp _while
+_end_while: 
 
 pop ebx
 ret

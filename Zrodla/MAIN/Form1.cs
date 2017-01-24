@@ -98,10 +98,7 @@ namespace MAIN
                 ExternalFunctions.computeMatrixU_ASM(matrixU, size);
                 ExternalFunctions.computeMatrixL_ASM(matrixL, matrixU, size);
                 ExternalFunctions.computeVectorY_ASM(vectorY, vectorB, matrixL, size);
-
-                //ExternalFunctions.computeVectorX_ASM(vectorX, vectorY, matrixU, size);
-                ExternalFunctions.computeVectorX_plotek(vectorX, vectorY, matrixU, size);
-
+                ExternalFunctions.computeVectorX_ASM(vectorX, vectorY, matrixU, size);
             }
             else
             {
