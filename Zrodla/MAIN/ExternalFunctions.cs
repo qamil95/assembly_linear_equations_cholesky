@@ -1,4 +1,11 @@
-﻿using System.Runtime.InteropServices;
+﻿/*
+	Autor: Kamil Ziętek
+	Rok akademicki: 2016/2017
+	Semestr: 5
+	Grupa: 8
+*/
+
+using System.Runtime.InteropServices;
 
 namespace MAIN
 {

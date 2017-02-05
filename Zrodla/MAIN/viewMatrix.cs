@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+	Autor: Kamil Ziętek
+	Rok akademicki: 2016/2017
+	Semestr: 5
+	Grupa: 8
+*/
+
 using System.Windows.Forms;
 
 namespace MAIN
@@ -22,6 +21,13 @@ namespace MAIN
             InitializeComponent();
         }
 
+        /***************************************************************************/
+        /* Metoda wyświetlająca okienko z podglądem wczytanej macierzy.            */
+        /* Parametry wejściowe: macierz A, wektor B, wektor wyników X oraz zmienna */
+        /* computed, wskazująca czy macierz jest obliczona: jeśli tak, zostanie    */
+        /* wyświetlony wektor wyników, jeśli nie - wyniki zostaną zastąpione       */
+        /* znakami zapytania.                                                      */
+        /***************************************************************************/
         public viewMatrix(double[][] matrixA, double[] vectorB, double[] vectorX, bool computed)
         {
             InitializeComponent();

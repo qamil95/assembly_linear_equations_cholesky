@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+	Autor: Kamil Ziętek
+	Rok akademicki: 2016/2017
+	Semestr: 5
+	Grupa: 8
+*/
+
+using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
@@ -8,8 +15,8 @@ namespace MAIN
 {
     public partial class Form1 : Form
     {
-        bool assembly = true;
-        bool computed = false;
+        bool assembly = true; //wybór biblioteki, true - asembler, false - C
+        bool computed = false; //czy macierz została już obliczona
         int size; //wymiar macierzy (są kwadratowe) i długość wektora
         double[][] matrixA; //macierz ze współczynnikami
         double[] vectorB; //wektor wyrazów wolnych

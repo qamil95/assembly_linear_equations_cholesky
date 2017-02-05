@@ -1,3 +1,10 @@
+/*
+	Autor: Kamil Ziêtek
+	Rok akademicki: 2016/2017
+	Semestr: 5
+	Grupa: 8
+*/
+
 #pragma once
 #define EXPORT_DLL __declspec(dllexport)
 

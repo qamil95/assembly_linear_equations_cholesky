@@ -1,5 +1,16 @@
+/*
+	Autor: Kamil Ziêtek
+	Rok akademicki: 2016/2017
+	Semestr: 5
+	Grupa: 8
+*/
+
 #include "DLL.h"
 
+/**************************************************************************/
+/* Funkcja obliczaj¹ca macierz U.Parametry wejœciowe : macierzU(miejsce   */
+/* na wynik) oraz rozmiar macierzy.                                       */
+/**************************************************************************/
 void computeMatrixU_C(double* matrixU, int size) {
 	for (int k = 0; k < size - 1; k++)
 		for (int i = k + 1; i < size; i++)		
@@ -7,6 +18,10 @@ void computeMatrixU_C(double* matrixU, int size) {
 				matrixU[i*size+j] = matrixU[i*size+j] - ((matrixU[i*size+k] * matrixU[k*size+j]) / matrixU[k*size+k]);
 }
 
+/***************************************************************************/
+/* Funkcja obliczaj¹ca macierz L. Parametry wejœciowe: macierzL (miejsce   */
+/* na wynik), macierzU oraz rozmiar macierzy.                              */
+/***************************************************************************/
 void computeMatrixL_C(double* matrixL, double* matrixU, int size)
 {
 	for (int k = 0; k < size - 1; k++)
@@ -21,6 +36,10 @@ void computeMatrixL_C(double* matrixL, double* matrixU, int size)
 		}
 }
 
+/**************************************************************************/
+/* Funkcja obliczaj¹ca wektor Y. Parametry wejœciowe: wektor Y (miejsce   */
+/* na wynik), wektor B, macierz L oraz rozmiar macierzy.                  */
+/**************************************************************************/
 void computeVectorY_C(double* vectorY, double* vectorB, double* matrixL, int size)
 {
 	vectorY[0] = vectorB[0];
@@ -35,6 +54,10 @@ void computeVectorY_C(double* vectorY, double* vectorB, double* matrixL, int siz
 	}
 }
 
+/**************************************************************************/
+/* Funkcja obliczaj¹ca wektor X. Parametry wejœciowe: wektor X (miejsce   */
+/* na wynik), wektor Y, macierz U oraz rozmiar macierzy.                  */
+/**************************************************************************/
 void computeVectorX_C(double* vectorX, double* vectorY, double* matrixU, int size)
 {
 	vectorX[size - 1] = vectorY[size - 1] / matrixU[(size - 1)*size + (size - 1)];
